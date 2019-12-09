@@ -1,0 +1,228 @@
+{
+  "out": {
+    "disconnect": "string",
+    "join": {
+      "channel": "string"
+    },
+    "join:silent": {
+      "channel": [
+        "string"
+      ]
+    },
+    "leave": {
+      "channel": "string"
+    },
+    "say": {
+      "channelName": "string",
+      "message": "string",
+      "isBot": "boolean"
+    },
+    "rain": {
+      "message": {
+        "amount": "uint16",
+        "coin": "string",
+        "num": "uint8"
+      },
+      "comment": "string",
+      "accessToken": "string",
+      "channelName": "string"
+    },
+    "chat:count": {
+      "username": "string"
+    },
+    "fp": "string",
+    "stats": {
+      "channelName": "string",
+      "kind": "string",
+      "game": "string",
+      "currency": "string",
+      "token": "string"
+    },
+    "giphy:get": {
+      "command": "string",
+      "limit": "uint8",
+      "keyword": "string"
+    },
+    "rooms:hibernate": {},
+    "rate:get": {},
+    "typing": {},
+    "ids": {
+      "disconnect": 1,
+      "join": 2,
+      "join:silent": 3,
+      "leave": 4,
+      "say": 5,
+      "rain": 6,
+      "chat:count": 7,
+      "fp": 8,
+      "stats": 9,
+      "giphy:get": 10,
+      "rooms:hibernate":11,
+      "rate:get": 12,
+      "typing": 13
+    }
+  },
+  "in": {
+    "user": {
+      "id": "uint32",
+      "avatar": "string",
+      "ignore_list": [
+        "string"
+      ],
+      "rank": "uint8",
+      "role": "string",
+      "username": "string",
+      "rooms": [
+        "string"
+      ]
+    },
+    "joined:silent": {
+      "channel": "string",
+      "moderator": "boolean",
+      "username": "string"
+    },
+    "joined": {
+      "channel": "string",
+      "moderator": "boolean",
+      "username": "string",
+      "history": [
+        {
+          "mid": "uint32",
+          "timestamp": "uint32",
+          "type": "string",
+          "username": "string",
+          "user_label": "string",
+          "user_color": "string",
+          "role": "string",
+          "avatar": "string",
+          "rank": "uint8",
+          "message": "string",
+          "show": "boolean",
+          "filter": "string",
+          "bot": "boolean",
+          "channelName": "string",
+          "key": "uint32"
+        }
+      ]
+    },
+    "joined:system": {
+      "channel": "string",
+      "moderator": "boolean",
+      "username": "string",
+      "history": [
+        {
+          "bot": "boolean",
+          "channel": "string",
+          "key": "uint32",
+          "message": "string",
+          "mid": "uint32",
+          "msg_filter": "string",
+          "show": "boolean",
+          "timestamp": "uint32",
+          "type": "string"
+        }
+      ]
+    },
+    "chat:count": "varuint",
+    "rate": {
+      "rate": [
+        {
+          "to": "string",
+          "values": [
+            [
+              "string",
+              "uint32"
+            ]
+          ]
+        }
+      ],
+      "lastUpdate": "uint32"
+    },
+    "msg": {
+      "avatar": "string",
+      "bot": "boolean",
+      "channelName": "string",
+      "message": "string",
+      "mid": "uint32",
+      "rank": "uint8",
+      "role": "string",
+      "timestamp": "uint32",
+      "type": "string",
+      "user_color": "string",
+      "user_label": "string",
+      "username": "string"
+    },
+    "msg:stats": {
+      "avatar": "string",
+      "channelName": "string",
+      "currency": "string",
+      "game": "string",
+      "kind": "string",
+      "rank": "uint8",
+      "role": "string",
+      "timestamp": "uint32",
+      "type": "string",
+      "username": "string",
+      "stats": {
+        "lucky": "int8",
+        "lucky_total": "varint",
+        "number_bets": "varuint",
+        "number_bets_losses": "varuint",
+        "number_bets_wins": "varuint",
+        "profit": "varuint",
+        "wagered": "varuint"
+      }
+    },
+    "msg:count": "varuint",
+    "rained:sender": {
+      "currency": "string",
+      "amount": "uint32"
+    },
+    "rained:receiver": {
+      "sender": "string",
+      "currency": "string",
+      "amount": "uint32"
+    },
+    "ignore:update": "string",
+    "chat:error": "string",
+    "delete": "uint32",
+    "left": {
+      "channel": "string"
+    },
+    "chat:reply": "string",
+    "stats": {
+      "users": "uint16",
+      "connections": "uint16"
+    },
+    "giphy:results": [
+      {
+        "url": "string",
+        "webp": "string"
+      }
+    ],
+    "reload": {},
+    "typing": {},
+    "ids": {
+      "user": 1,
+      "joined:silent": 2,
+      "joined": 3,
+      "joined:system": 4,
+      "chat:count": 5,
+      "rate": 6,
+      "msg": 7,
+      "msg:stats": 8,
+      "msg:count": 9,
+      "rained:sender": 10,
+      "rained:receiver": 11,
+      "ignore:update": 12,
+      "chat:error": 13,
+      "delete": 14,
+      "left": 15,
+      "chat:reply": 16,
+      "stats": 17,
+      "giphy:results": 18,
+      "reload": 19,
+      "typing": 20
+    }
+  }
+}
