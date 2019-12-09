@@ -19,7 +19,7 @@
     },
     "rain": {
       "message": {
-        "amount": "uint16",
+        "amount": "float32",
         "coin": "string",
         "num": "uint8"
       },
@@ -131,7 +131,7 @@
           "values": [
             [
               "string",
-              "uint32"
+              "float32"
             ]
           ]
         }
@@ -169,19 +169,19 @@
         "number_bets": "varuint",
         "number_bets_losses": "varuint",
         "number_bets_wins": "varuint",
-        "profit": "varuint",
+        "profit": "float32",
         "wagered": "varuint"
       }
     },
     "msg:count": "varuint",
     "rained:sender": {
       "currency": "string",
-      "amount": "uint32"
+      "amount": "float32"
     },
     "rained:receiver": {
       "sender": "string",
       "currency": "string",
-      "amount": "uint32"
+      "amount": "float32"
     },
     "ignore:update": "string",
     "chat:error": "string",
