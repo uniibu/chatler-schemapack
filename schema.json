@@ -1,5 +1,5 @@
 {
-  "out": {
+  "in": {
     "disconnect": "string",
     "join": {
       "channel": "string"
@@ -19,7 +19,7 @@
     },
     "rain": {
       "message": {
-        "amount": "float32",
+        "amount": "string",
         "coin": "string",
         "num": "uint8"
       },
@@ -62,7 +62,7 @@
       "typing": 13
     }
   },
-  "in": {
+  "out": {
     "user": {
       "id": "uint32",
       "avatar": "string",
@@ -152,6 +152,40 @@
       "user_label": "string",
       "username": "string"
     },
+    "msg:drizzle": {
+      "avatar": "string",
+      "bot": "boolean",
+      "channelName": "string",
+      "message": "string",
+      "mid": "uint32",
+      "rank": "uint8",
+      "role": "string",
+      "timestamp": "uint32",
+      "type": "string",
+      "user_color": "string",
+      "user_label": "string",
+      "username": "string",
+      "users": [{"username": "string","amount":"string", "currency": "string"}]
+    }, 
+    "msg:rain": {
+      "avatar": "string",
+      "bot": "boolean",
+      "channelName": "string",
+      "message": "string",
+      "mid": "uint32",
+      "rank": "uint8",
+      "role": "string",
+      "timestamp": "uint32",
+      "type": "string",
+      "user_color": "string",
+      "user_label": "string",
+      "username": "string",
+       "from": "string",
+       "users": ["string"],
+      "currency": "string",
+      "amount": "string",
+      "comment": "string"
+    },
     "msg:stats": {
       "avatar": "string",
       "channelName": "string",
@@ -164,24 +198,24 @@
       "type": "string",
       "username": "string",
       "stats": {
-        "lucky": "int8",
-        "lucky_total": "varint",
-        "number_bets": "varuint",
-        "number_bets_losses": "varuint",
-        "number_bets_wins": "varuint",
-        "profit": "float32",
-        "wagered": "varuint"
+        "lucky": "string",
+        "lucky_total": "string",
+        "number_bets": "string",
+        "number_bets_losses": "string",
+        "number_bets_wins": "string",
+        "profit": "string",
+        "wagered": "string"
       }
     },
     "msg:count": "varuint",
     "rained:sender": {
       "currency": "string",
-      "amount": "float32"
+      "amount": "string"
     },
     "rained:receiver": {
       "sender": "string",
       "currency": "string",
-      "amount": "float32"
+      "amount": "string"
     },
     "ignore:update": "string",
     "chat:error": "string",
@@ -222,7 +256,9 @@
       "stats": 17,
       "giphy:results": 18,
       "reload": 19,
-      "typing": 20
+      "typing": 20,
+      "msg:drizzle": 21,
+      "msg:rain": 22
     }
   }
 }
